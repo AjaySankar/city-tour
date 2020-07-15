@@ -3,19 +3,20 @@ import './Tour.scss';
 
 class Tour extends Component {
     render() {
+        const {city, img, name, info} = this.props.tour
         return (
             <article className="tour">
                 <div className="img-container">
-                    <img src="https://images.pexels.com/photos/4816503/pexels-photo-4816503.jpeg" alt="Test image"/>
+                    <img src={img} alt=""/>
                     <span className="close-btn">
                         <i className="fas fa-window-close"/>
                     </span>
                 </div>
                 <div className="tour-info">
-                    <h3>city</h3>
-                    <h4>name</h4>
+                    <h3>{city}</h3>
+                    <h4>{name}</h4>
                     <h5>
-                        info {" "}
+                        {info} {" "}
                         <span>
                             <i className="fas fa-caret-square-down"/>
                         </span>
